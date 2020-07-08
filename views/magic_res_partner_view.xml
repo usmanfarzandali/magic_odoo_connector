@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+
+		
+		
+		
+		<record id="magic_res_partner_connector_form_view" model="ir.ui.view">
+		    <field name="name">magic_res_partner_connector</field>
+		    <field name="model">magic.res.partner</field>
+		    <field name="arch" type="xml">
+		    	
+		    	<form string="Magic Customer">
+
+                     <header>
+                        <button name="action_create_customer"  string="Trasfer To Odoo" class="oe_highlight" type="object"/>
+						<button name="action_cancel"  string="Cancel" class="oe_highlight" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,trasfer,cancel"/>
+                    </header>
+		    		<sheet>
+		    			<group >
+						<field name="magic_company_type" />
+				            <field name="title" />
+							<field name="name" />
+							<field name="customer_source_id" />
+						</group>
+		    			<group >
+						<field name="magic_ref" />
+						<field name="magic_phone" />
+						<field name="magic_mobile" />
+						<field name="magic_fax" />
+				         
+						</group>
+						<group >
+						<field name="magic_street" />
+						<field name="magic_street2" />
+						<field name="magic_city" />
+						<field name="state_id" />
+						<field name="magic_zip" />
+						<field name="country_id" />
+				            
+						</group>
+						<group >
+
+						<field name="magic_email" />
+						<field name="magic_website" />
+						<field name="magic_connection_id" />
+						<field name="magic_comment" />
+				       
+						</group>
+		    		</sheet>
+
+
+		    		  <!-- <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>  -->
+		    	</form>
+		    	
+			</field>
+		</record>
+
+
+
+        <record model="ir.ui.view" id="magic_res_partner_tree_view">
+		    <field name="name">magic_res_partner_tree</field>
+		    <field name="model">magic.res.partner</field>
+		    <field name="arch" type="xml">
+		        <tree string="Magic Customer">
+				
+					<field name="magic_company_type"/>
+		            <field name="name"/>
+		            <field name="customer_source_id"/>
+		        </tree>
+		     </field>
+		</record>
+
+
+
+
+		
+		<record model="ir.actions.act_window" id="magic_customer_action">
+		    <field name="name">Magic Customer</field>
+		    <field name="res_model">magic.res.partner</field>
+		    <!-- <field name="view_type">form</field> -->
+    		<field name="view_mode">tree,form</field>
+    		<field name="context">{}</field>
+		</record>
+        
+       
+		
+
+</odoo>

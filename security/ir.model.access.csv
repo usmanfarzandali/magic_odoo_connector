@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_id_magic_res_partner,access_magic_res_partner,model_magic_res_partner,base.group_user,1,1,1,1
+access_id_magic_connection,access_magic_connection,model_magic_connection,base.group_user,1,1,1,1
+access_id_customer_source,access_customer_source,model_customer_source,base.group_user,1,1,1,1
